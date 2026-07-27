@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora Particles — Interactive Cosmic Playground</title>
+  <meta name="description" content="A stunning zero-dependency interactive particle system with aurora effects, gravity wells, and real-time controls." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div class="ui">
+    <header class="header">
+      <h1>AURORA<span>PARTICLES</span></h1>
+      <p class="tagline">Interactive Cosmic Playground</p>
+    </header>
+
+    <div class="controls">
+      <div class="control-group">
+        <label>Particle Count</label>
+        <input type="range" id="count" min="200" max="2500" value="900" step="50" />
+        <span id="count-val">900</span>
+      </div>
+
+      <div class="control-group">
+        <label>Gravity Strength</label>
+        <input type="range" id="gravity" min="0" max="100" value="35" />
+        <span id="gravity-val">35</span>
+      </div>
+
+      <div class="control-group">
+        <label>Trail Length</label>
+        <input type="range" id="trail" min="0" max="30" value="12" />
+        <span id="trail-val">12</span>
+      </div>
+
+      <div class="control-group">
+        <label>Color Mode</label>
+        <select id="colorMode">
+          <option value="aurora">Aurora Borealis</option>
+          <option value="neon">Neon Cyber</option>
+          <option value="fire">Solar Flare</option>
+          <option value="ocean">Deep Ocean</option>
+          <option value="mono">Monochrome</option>
+        </select>
+      </div>
+
+      <div class="buttons">
+        <button id="reset" class="btn">Reset Field</button>
+        <button id="explode" class="btn accent">Explode</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Move mouse to attract • Click to create gravity well • Double-click to clear wells</p>
+      <p class="credit">Built with pure HTML · CSS · JS — zero dependencies</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
